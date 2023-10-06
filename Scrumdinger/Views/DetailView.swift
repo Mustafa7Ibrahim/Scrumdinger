@@ -17,7 +17,9 @@ struct DetailView: View {
         // main Screen
         List{
             Section(header: Text("Meeting Info")){
-                NavigationLink(destination: MeetingView()) {
+                NavigationLink(
+                    destination: MeetingView(scrum: $scrum)
+                ) {
                     Label(
                         "Start Metting",
                         systemImage: "timer"
@@ -58,6 +60,21 @@ struct DetailView: View {
                     Label(attendee.name, systemImage: "person")
                 }
             }
+            
+            Section(header: Text("History")){
+                if scrum.history.isEmpty {
+                    Label(
+                        "no meetings yet",
+                        systemImage: "calendar.badge.exclamationmark"
+                    )
+                }
+                ForEach(scrum.history) { history in
+                    HStack{
+                        Image(systemName: "calendar")
+                        Text(history.date, style: .date)
+                    }
+                }
+            }
         }
         .navigationTitle(scrum.title)
         .toolbar{
@@ -72,25 +89,10 @@ struct DetailView: View {
         
         // sheet
         .sheet(isPresented: $isPresentingEditView){
-            NavigationStack{
-                DetailEditView(scrum: $editingScrum)
-                    .navigationTitle(scrum.title)
-                    .toolbar{
-                        ToolbarItem(placement: .cancellationAction){
-                            Button("Cancle"){
-                                isPresentingEditView = false
-                            }
-                        }
-                        
-                        ToolbarItem(placement: .confirmationAction){
-                            Button("Done"){
-                                isPresentingEditView = false
-                                scrum = editingScrum
-                                
-                            }
-                        }
-                    }
-            }
+            EditScrumSheet(
+                scrum: $scrum,
+                isPresentingEditView: $isPresentingEditView
+            )
         }
     }
 }
