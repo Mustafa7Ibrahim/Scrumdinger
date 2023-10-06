@@ -86,6 +86,7 @@ struct DetailView: View {
                             Button("Done"){
                                 isPresentingEditView = false
                                 scrum = editingScrum
+                                
                             }
                         }
                     }
