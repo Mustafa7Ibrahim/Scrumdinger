@@ -20,6 +20,7 @@ struct MeetingView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 16.0)
                 .fill(scrum.theme.mainColor)
+            
             VStack {
                 MeetingHeaderView(
                     secondsElapsed: scrumTimer.secondsElapsed,
@@ -27,7 +28,10 @@ struct MeetingView: View {
                     theme: scrum.theme
                 )
                 
-                Circle().strokeBorder(lineWidth: 24)
+                MeetingTimerView(
+                    speakers: scrumTimer.speakers,
+                    theme: scrum.theme
+                )
                 
                 MeetingFooterView(
                     speakers: scrumTimer.speakers,
