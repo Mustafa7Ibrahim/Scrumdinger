@@ -11,6 +11,7 @@ struct MeetingTimerView: View {
     
     let speakers: [ScrumTimer.Speaker]
     let theme: Theme
+    let isRecording: Bool
     
     private var currentSpeakers: String {
         speakers.first(where: { $0.isCompleted })?.name ?? "Someone"
@@ -25,6 +26,13 @@ struct MeetingTimerView: View {
                     Text(currentSpeakers)
                         .font(.title)
                     Text("Is Speaking")
+                    Image(
+                        systemName: isRecording ?
+                        "mic" : "mic.slash"
+                    )
+                    .font(.title)
+                    .padding(.top)
+                    .accessibilityLabel(isRecording ? "with transcription" : "without transcription")
                 }
                 .accessibilityElement(children: .combine)
                 .foregroundStyle(theme.accentColor)
@@ -64,6 +72,7 @@ struct MeetingTimerView: View {
     
   return MeetingTimerView(
     speakers: speakers,
-    theme: .bubblegum
+    theme: .bubblegum,
+    isRecording: true
   )
 }

@@ -8,13 +8,22 @@
 import Foundation
 
 struct History: Identifiable, Codable {
-    var id: UUID
-    var date: Date
+    let id: UUID
+    let date: Date
     var attendees: [DailyScrum.Attendee]
+    var transcript: String?
     
-    init(id: UUID = UUID(), date: Date = Date(), attendees: [DailyScrum.Attendee]) {
+    
+    init(id: UUID = UUID(), date: Date = Date(), attendees: [DailyScrum.Attendee], transcript: String? = nil) {
         self.id = id
         self.date = date
         self.attendees = attendees
+        self.transcript = transcript
+    }
+}
+
+extension History {
+    var attendeeString: String {
+        ListFormatter.localizedString(byJoining: attendees.map { $0.name })
     }
 }
