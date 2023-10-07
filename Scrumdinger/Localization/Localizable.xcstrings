@@ -1,5 +1,179 @@
 {
   "sourceLanguage" : "en",
-  "strings" : {},
+  "strings" : {
+    "%lld" : {
+
+    },
+    "%lld attendees" : {
+
+    },
+    "%lld minute meeting" : {
+
+    },
+    "%lld minutes" : {
+
+    },
+    "Add" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آضافة"
+          }
+        }
+      }
+    },
+    "Attendee" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحضور"
+          }
+        }
+      }
+    },
+    "Attendees" : {
+
+    },
+    "Cancle" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الغاء"
+          }
+        }
+      }
+    },
+    "Daily Scrum" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Dissmiss" : {
+
+    },
+    "Done" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعديل"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+
+    },
+    "History" : {
+
+    },
+    "Is Speaking" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتحدث"
+          }
+        }
+      }
+    },
+    "Last Speaker" : {
+
+    },
+    "Length" : {
+
+    },
+    "Meeting Info" : {
+
+    },
+    "Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        }
+      }
+    },
+    "New Scrum" : {
+
+    },
+    "Next speaker" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المتحدث التالي"
+          }
+        }
+      }
+    },
+    "no meetings yet" : {
+
+    },
+    "Seconds Elapsed" : {
+
+    },
+    "Seconds Remaining" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عدد الثواني الباقيه"
+          }
+        }
+      }
+    },
+    "Start Metting" : {
+
+    },
+    "Theme" : {
+
+    },
+    "Time remaining" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقت المتبقي"
+          }
+        }
+      }
+    },
+    "Title" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان"
+          }
+        }
+      }
+    },
+    "Transcript" : {
+
+    },
+    "with transcription" : {
+
+    },
+    "without transcription" : {
+
+    }
+  },
   "version" : "1.0"
 }

@@ -46,7 +46,7 @@ struct ScrumdingerApp: App {
             } content: { wrapper in
                 ErrorView(errorWrapper: wrapper)
                 
-            }
+            }.environment(\.locale, .init(identifier: "ar"))
         }
     }
 }
